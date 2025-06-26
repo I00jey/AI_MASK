@@ -1,5 +1,9 @@
+import os
+# 터미널에 Info 메시지 숨김 (경고부터 표시)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import cv2
 import cvlib as cv
+
 
 # 웹캠 열기
 webcam = cv2.VideoCapture(0)
