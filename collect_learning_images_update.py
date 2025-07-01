@@ -1,10 +1,11 @@
 import os
+# 경고 메시지만 출력
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import cv2
 import numpy as np
 import mediapipe as mp
 
-# 경고 메시지만 출력
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 # 저장할 폴더 설정 (mask와 no_mask
 SAVE_DIR = './no_mask'
@@ -61,7 +62,7 @@ while True:
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
     # 결과 프레임 출력
-    cv2.imshow("캡처된 프레임", frame)
+    cv2.imshow("collecting_learning_images", frame)
 
     # 종료: 'q' 또는 'ESC' 키
     if cv2.waitKey(1) & 0xFF in (ord('q'), 27):
