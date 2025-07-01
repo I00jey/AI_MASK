@@ -1,4 +1,6 @@
 import os
+# 불편요한 TF 로그 숨김 (에러 이상만 표시)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import numpy as np
 import tensorflow as tf
 from keras import Sequential
@@ -7,8 +9,7 @@ from keras.applications.resnet50 import ResNet50, preprocess_input
 from keras.preprocessing.image import load_img, img_to_array
 from sklearn.model_selection import train_test_split
 
-# 불편요한 TF 로그 숨김 (에러 이상만 표시)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 
 # 데이터 경로
 path_dir_no_mask = './no_mask'
