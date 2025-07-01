@@ -1,0 +1,27 @@
+# Python 관련 무시 항목
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 가상환경 무시
+.venv/
+env/
+venv/
+
+# 이미지 파일 무시
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.tiff
+*.svg
+no_mask/*.jpg
+mask/*.jpg
+
+# 기타 무시하고 싶은 항목
+.DS_Store
+.idea/
+.vscode/
